@@ -14,14 +14,26 @@ $wgHooks['SkinAfterContent'][] = 'Changyan::onSkinAfterContent';
 
 
 class Changyan {
+	
+	
 	public static function onSkinAfterBottomScripts($skin, &$text){
 		echo "testing..";
 		return true;
 	}
 	public static function onSkinAfterContent(&$data, $skin = null){
+		global $wgDuoshuoShortName, $wgTitle, $wgRequest, $wgOut;
+		if($wgTitle->isSpecialPage()
+			|| $wgTitle->getArticleID() == 0
+			|| !$wgTitle->canTalk()
+			|| $wgTitle->isTalkPage()
+			|| method_exists($wgTitle, 'isMainPage') && $wgTitle->isMainPage()
+			|| in_array($wgTitle->getNamespace(), array(NS_MEDIAWIKI, NS_TEMPLATE, NS_CATEGORY))
+			|| $wgOut->isPrintable()
+			|| $wgRequest->getVal('action', 'view') != "view")
+			return true;
 		$data .='<!--高速版-->
 <div id="SOHUCS"></div>
-<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
         appid: "cyrNJaVbr",
