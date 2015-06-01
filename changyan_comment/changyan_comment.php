@@ -45,7 +45,11 @@ class Changyan {
 			|| $wgOut->isPrintable()
 			|| $wgRequest->getVal('action', 'view') != "view")
 			return true;
-		$data .='<!--高速版-->
+			
+			$sourceid=$wgTitle->getArticleID(); //这里把畅言的sourceid直接设成文章ID
+		$data .='
+		<div id="SOHUCS" sid="'.$sourceid.'"></div>
+		<!--高速版-->
 <div id="SOHUCS"></div>
 <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
