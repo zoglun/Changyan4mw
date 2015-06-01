@@ -6,12 +6,12 @@ $wgExtensionCredits['specialpage'][] = array(
 		'version'           => '0.2',
 		'author'            => 'techmoe',
 		'description'       => 'Mediawiki 畅言评论插件',
-		'descriptionmsg'    => '',
+		'descriptionmsg'    => 'desc',
 		'url'               => 'http://cnblogs.com/techmoe'
 );
 
 $wgHooks['SkinAfterContent'][] = 'Changyan::onSkinAfterContent';
-//$wgHooks['SkinAfterBottomScripts'][] = 'Changyan::onSkinAfterBottomScripts';
+
 
 class Changyan {
 	public static function onSkinAfterBottomScripts($skin, &$text){
