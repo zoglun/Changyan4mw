@@ -1,4 +1,18 @@
 <?php
+/* 
+Changyan4MW -- Mediawikin畅言评论插件
+more:https://github.com/moehub/Changyan4mw/
+
+安装方法：
+将整个changyan_comment文件夹复制到extensions文件夹
+然后在你的mw的LocalSettings.php中添加如下代码，记得把下面的YOUR_APPID替换为你在畅言的站点APPID
+
+$CY_APPID="YOUR_APPID";
+require_once( "$IP/extensions/changyan_comment/changyan_comment.php");
+
+
+
+*/
 
 $wgExtensionCredits['specialpage'][] = array(
 		'path'              => __FILE__,
@@ -21,7 +35,7 @@ class Changyan {
 		return true;
 	}
 	public static function onSkinAfterContent(&$data, $skin = null){
-		global $wgDuoshuoShortName, $wgTitle, $wgRequest, $wgOut;
+		global $wgTitle, $wgRequest, $wgOut, $CY_APPID;
 		if($wgTitle->isSpecialPage()
 			|| $wgTitle->getArticleID() == 0
 			|| !$wgTitle->canTalk()
@@ -36,8 +50,7 @@ class Changyan {
 <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
-        appid: "cyrNJaVbr",
-        conf: "prod_c780bd492562f1b64ac67a1c591bb236"
+        appid: "'.$CY_APPID.'"
     });
 </script>        
 ';
