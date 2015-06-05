@@ -3,17 +3,11 @@
 Changyan4MW -- Mediawikin畅言评论插件
 more:https://github.com/moehub/Changyan4mw/
 
-安装方法：
-将整个changyan_comment文件夹复制到extensions文件夹
-然后在你的mw的LocalSettings.php中添加如下代码，记得把下面的YOUR_APPID替换为你在畅言的站点APPID
-
-$CY_APPID="YOUR_APPID";
-require_once( "$IP/extensions/changyan_comment/changyan_comment.php");
-
-
+安装方法请见README
 
 */
 
+//注册插件信息
 $wgExtensionCredits['specialpage'][] = array(
 		'path'              => __FILE__,
 		'name'              => 'changyan4mw',
@@ -24,18 +18,19 @@ $wgExtensionCredits['specialpage'][] = array(
 		'url'               => 'http://cnblogs.com/techmoe'
 );
 
+//挂钩子
 $wgHooks['SkinAfterContent'][] = 'Changyan::onSkinAfterContent';
-
+$wgHooks['UserLogoutComplete'][] = 'Changyan::onUserLogoutComplete';
 
 class Changyan {
 	
 	
-	public static function onSkinAfterBottomScripts($skin, &$text){
-		echo "testing..";
-		return true;
-	}
+    //插评论框
 	public static function onSkinAfterContent(&$data, $skin = null){
-		global $wgTitle, $wgRequest, $wgOut, $CY_APPID;
+		global $wgTitle, $wgRequest, $wgOut, $CY_APPID,$wgUser;
+		
+		//判断是否加载评论框
+		//比如说如果碰见登陆界面之类的地方就直接跳出，不显示评论框
 		if($wgTitle->isSpecialPage()
 			|| $wgTitle->getArticleID() == 0
 			|| !$wgTitle->canTalk()
@@ -58,7 +53,20 @@ class Changyan {
     });
 </script>        
 ';
+
 		return true;
 	}
+	
+	//当用户退出时调用畅言的接口清除畅言那边的cookie
+	public static function onUserLogoutComplete(&$user, &$inject_html, $old_name){
+		global $CY_APPID;
+		$inject_html.="
+		<script>
+	var img = new Image(); 
+	img.src='http://changyan.sohu.com/api/2/logout?client_id=$CY_APPID&callback=C66A5BAD9ED000011E5A1F685821111F';
+</script>
+		";
+	}
+		
 }
 ?>
