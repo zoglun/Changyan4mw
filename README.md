@@ -24,5 +24,5 @@ http://<你的站点的域名>/extensions/changyan_comment/callback.php <br>
 2.目前的单点登录只支持“网站为主的单点”，也就是说，登陆MediaWiki账号的同时登陆畅言账号，但暂时还没有做到从畅言端登陆MediaWiki
 
 <br><br>
-作者bolg：<a href="http://cnblogs.com/techmoe">学园都市超科学的代码研究社</a> 欢迎前来交流<br>
+作者bolg：<a href="http://cnblogs.com/techmoe" target="_blank">学园都市超科学的代码研究社</a> 欢迎前来交流<br>
 mail:developershi@sina.cn
