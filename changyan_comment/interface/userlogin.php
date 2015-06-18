@@ -12,11 +12,9 @@ require('../unity/useraction.php');
 require('../unity/changyan_sign.php');
 
 
-//验证签名是否有效
-/*
 $truesign=cySsoSign::loginsign($CY_APPKEY,$_GET['cy_user_id'],$_GET['img_url'],$_GET['nickname'],$_GET['profile_url'],$_GET['user_id']);
 if($_GET['sign']!=$truesign) die('签名验证失败，请检查APPKEY是否正确');
-*/
+
 
 if($_GET['user_id']==''){
     login_nouid();
