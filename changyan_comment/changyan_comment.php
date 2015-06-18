@@ -59,17 +59,26 @@ class Changyan {
 	
 	//当用户退出时调用畅言的接口清除畅言那边的cookie
 	public static function onUserLogoutComplete(&$user, &$inject_html, $old_name){
+<<<<<<< HEAD
 		global $CY_APPKEY,$wgUser;
 		$token=cySign::sign($CY_APPKEY,"",$wgUser->getName(),"",$wgUser->getId());
 		$inject_html.="
 		<script>
 	var img = new Image(); 
 	img.src='http://changyan.sohu.com/api/2/logout?client_id=$CY_APPID&callback=$token';
+=======
+		global $CY_APPID;
+		$inject_html.="
+		<script>
+	var img = new Image(); 
+	img.src='http://changyan.sohu.com/api/2/logout?client_id=$CY_APPID&callback=C66A5BAD9ED000011E5A1F685821111F';
+>>>>>>> b17c1f84a400db0f5ec4d168712d535517b26aaf
 </script>
 		";
 	}
 		
 }
+<<<<<<< HEAD
 
 class cySign
     {
@@ -80,4 +89,6 @@ class cySign
         }
     }
 
+=======
+>>>>>>> b17c1f84a400db0f5ec4d168712d535517b26aaf
 ?>
