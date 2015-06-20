@@ -4,14 +4,7 @@ Changyan4mw 畅言回调接口
 配置方法见README
 */
 
-/*
-//加载MediaWiki框架
-putenv("MW_INSTALL_PATH=../../.."); 
-require("../../../includes/WebStart.php");
 
-//加载用户设置
-require("../../../LocalSettings.php");
-*/
 
 
 //加载接口公共头部

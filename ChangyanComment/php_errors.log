@@ -267,3 +267,27 @@
 [20-Jun-2015 01:47:01 UTC] PHP Stack trace:
 [20-Jun-2015 01:47:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
 [20-Jun-2015 01:47:01 UTC] PHP   2. include() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:18
+[20-Jun-2015 02:09:31 UTC] PHP Warning:  require(../../../../LocalSettings.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/global.php on line 5
+[20-Jun-2015 02:09:31 UTC] PHP Stack trace:
+[20-Jun-2015 02:09:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
+[20-Jun-2015 02:09:31 UTC] PHP   2. include() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:11
+[20-Jun-2015 02:09:31 UTC] PHP Fatal error:  require(): Failed opening required '../../../../LocalSettings.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/global.php on line 5
+[20-Jun-2015 02:09:31 UTC] PHP Stack trace:
+[20-Jun-2015 02:09:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
+[20-Jun-2015 02:09:31 UTC] PHP   2. include() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:11
+[20-Jun-2015 02:14:04 UTC] PHP Warning:  require(/includes/WebStart.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/global.php on line 37
+[20-Jun-2015 02:14:04 UTC] PHP Stack trace:
+[20-Jun-2015 02:14:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
+[20-Jun-2015 02:14:04 UTC] PHP   2. include() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:11
+[20-Jun-2015 02:14:04 UTC] PHP Fatal error:  require(): Failed opening required '/includes/WebStart.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/global.php on line 37
+[20-Jun-2015 02:14:04 UTC] PHP Stack trace:
+[20-Jun-2015 02:14:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
+[20-Jun-2015 02:14:04 UTC] PHP   2. include() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:11
+[20-Jun-2015 02:14:43 UTC] PHP Warning:  require(/includes/WebStart.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/global.php on line 38
+[20-Jun-2015 02:14:43 UTC] PHP Stack trace:
+[20-Jun-2015 02:14:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
+[20-Jun-2015 02:14:43 UTC] PHP   2. include() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:11
+[20-Jun-2015 02:14:43 UTC] PHP Fatal error:  require(): Failed opening required '/includes/WebStart.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/global.php on line 38
+[20-Jun-2015 02:14:43 UTC] PHP Stack trace:
+[20-Jun-2015 02:14:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
+[20-Jun-2015 02:14:43 UTC] PHP   2. include() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:11

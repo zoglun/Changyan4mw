@@ -1,12 +1,8 @@
 <?php
 //接口公共部分
 
-/**
- * 当你在安装后，调用接口出现类似于
- * failed to open stream: No such file or directory in xxxxxx
- * 之类的include找不到文件的情况，请指定您的mw系统在服务器上的绝对路径
- */
-define('MW_SYSDIR','/home/ubuntu/workspace/mw/');//在此处填入您安装MW的绝对路径
+
+
 
 /**
  * 一个完整的加载mw框架的过程是这样的..
@@ -25,18 +21,26 @@ define('MW_SYSDIR','/home/ubuntu/workspace/mw/');//在此处填入您安装MW的
 
 //判断MW_SYSDIR是否为空
 
-if(defined(MW_SYSDIR) && constant(MW_SYSDIR)==''){
-    $mwpath='../../..';
-}else{
-    $mwpath=MW_SYSDIR;
-}
+
+
+$mwpath=getmwpath();
+
 putenv("MW_INSTALL_PATH=$mwpath"); 
 require("$mwpath/includes/WebStart.php");
-
 //加载用户设置
 require("$mwpath/LocalSettings.php");
 
-
+//获取mw安装目录
+function getmwpath(){
+    //注意：这里的反斜杠仅适用于linux，windows下尚未补全
+    $path=explode('/',__DIR__);
+    $workpath_array=array_splice($path,1,-3);
+    foreach($workpath_array as $i){
+        
+            $workpath.='/'.$i;
+    }
+    return $workpath;
+}
 
 //加载mw框架尾部部分
     function mw_foot(){
