@@ -13,13 +13,13 @@ Mediawiki 畅言评论插件
 <pre>
 $CY_APPID="此处替换为你的站点在畅言的APPID";
 $CY_APPKEY="此处替换为你的站点在畅言的APPKEY";
-require_once( "$IP/extensions/changyan_comment/changyan_comment.php");
+require_once( "$IP/extensions/ChangyanComment/ChangyanComment.php");
 </pre>
 APPID和APPKEY在畅言后台【设置】-【通用设置】-【高级设置】中查看<br>
 <img src="http://i1.tietuku.com/abda32c335d42a26.png" ><br>
 然后请在畅言后台中进入【设置】-【PC端设置】-【单点登录】，之后分别在下面的三个URL地址中填入以下内容<br>
-获取用户信息接口URL： http://<你的mw站点域名>/extensions/changyan_comment/interface/userinfo.php<br>
-用户退出接口URL： http://<你的mw站点域名>/extensions/changyan_comment/interface/userlogout.php<br>
+获取用户信息接口URL： http://<你的mw站点域名>/extensions/ChangyanComment/interface/userinfo.php<br>
+用户退出接口URL： http://<你的mw站点域名>/extensions/ChangyanComment/interface/userlogout.php<br>
 然后，在上面的【登陆行为】选择【js弹窗登陆】并在下面填入 window.location.href=$('a[title^=我们鼓励您]').attr('href');<br>
 <img src="http://i4.tietuku.com/926b0a080a8b566f.png">
 <br><br>
