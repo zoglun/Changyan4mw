@@ -25,7 +25,7 @@ define('MW_SYSDIR','');//在此处填入您安装MW的绝对路径
 
 //判断MW_SYSDIR是否为空
 
-if(empty(MW_SYSDIR)){
+if(defined(MW_SYSDIR)){
     $mwpath='../../..';
 }else{
     $mwpath=MW_SYSDIR;
