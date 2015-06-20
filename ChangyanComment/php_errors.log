@@ -304,3 +304,6 @@
 [20-Jun-2015 02:51:13 UTC] PHP Stack trace:
 [20-Jun-2015 02:51:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
 [20-Jun-2015 02:51:13 UTC] PHP   2. changyan_sso::getuserinfo() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:16
+[20-Jun-2015 04:24:56 UTC] PHP Notice:  Undefined variable: ret in /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userlogout.php on line 27
+[20-Jun-2015 04:24:56 UTC] PHP Stack trace:
+[20-Jun-2015 04:24:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userlogout.php:0
