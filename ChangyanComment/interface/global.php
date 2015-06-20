@@ -6,7 +6,7 @@
  * failed to open stream: No such file or directory in xxxxxx
  * 之类的include找不到文件的情况，请指定您的mw系统在服务器上的绝对路径
  */
-define('MW_SYSDIR','');//在此处填入您安装MW的绝对路径
+define('MW_SYSDIR','/home/ubuntu/workspace/mw/');//在此处填入您安装MW的绝对路径
 
 /**
  * 一个完整的加载mw框架的过程是这样的..
@@ -25,7 +25,7 @@ define('MW_SYSDIR','');//在此处填入您安装MW的绝对路径
 
 //判断MW_SYSDIR是否为空
 
-if(defined(MW_SYSDIR)){
+if(defined(MW_SYSDIR) && constant(MW_SYSDIR)==''){
     $mwpath='../../..';
 }else{
     $mwpath=MW_SYSDIR;
