@@ -1,11 +1,8 @@
 <?php
 //用户登出接口
 
-//加载MediaWiki框架
-putenv("MW_INSTALL_PATH=../../.."); 
-require("../../../includes/WebStart.php");
-//加载用户设置
-require("../../../LocalSettings.php");
+//加载接口公共头部
+include('global.php');
 //加载用户操作类
 require('../unity/useraction.php');
 
@@ -28,8 +25,7 @@ if($wgUser->getId()==0){
 //返回参数
 echo $_GET['callback'].'('.json_encode($return).')';
 
-//通过参考api.php，在加载框架最后需要关闭数据库连接
-$lb = wfGetLBFactory();
-$lb->shutdown();
+//结束框架
+mw_foot();
 
 ?>
