@@ -23,8 +23,12 @@ if($wgUser->getId()==0){
 
 
 //返回参数
-echo $_GET['callback'].'('.json_encode($return).')';
-
+if(empty($_GET['callback'])) {
+            echo 'no_callback'.'('.json_encode($ret).')';
+            
+        }else{
+            echo $_GET['callback'].'('.json_encode($ret).')';
+        }
 //结束框架
 mw_foot();
 

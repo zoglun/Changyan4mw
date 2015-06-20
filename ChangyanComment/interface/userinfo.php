@@ -35,7 +35,13 @@ class changyan_sso {
             $ret=array("is_login"=>0);
         }
         
-        echo $_GET['callback'].'('.json_encode($ret).')';
+        if(empty($_GET['callback'])) {
+            echo 'no_callback'.'('.json_encode($ret).')';
+            
+        }else{
+            echo $_GET['callback'].'('.json_encode($ret).')';
+        }
+        
         
     }
 }

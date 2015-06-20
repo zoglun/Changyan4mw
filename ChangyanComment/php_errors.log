@@ -291,3 +291,16 @@
 [20-Jun-2015 02:14:43 UTC] PHP Stack trace:
 [20-Jun-2015 02:14:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
 [20-Jun-2015 02:14:43 UTC] PHP   2. include() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:11
+[20-Jun-2015 02:49:42 UTC] PHP Notice:  Undefined variable: workpath in /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/global.php on line 40
+[20-Jun-2015 02:49:42 UTC] PHP Stack trace:
+[20-Jun-2015 02:49:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
+[20-Jun-2015 02:49:42 UTC] PHP   2. include() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:11
+[20-Jun-2015 02:49:42 UTC] PHP   3. getmwpath() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/global.php:26
+[20-Jun-2015 02:49:42 UTC] PHP Notice:  Undefined index: callback in /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php on line 38
+[20-Jun-2015 02:49:42 UTC] PHP Stack trace:
+[20-Jun-2015 02:49:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
+[20-Jun-2015 02:49:42 UTC] PHP   2. changyan_sso::getuserinfo() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:16
+[20-Jun-2015 02:51:13 UTC] PHP Notice:  Undefined index: callback in /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php on line 38
+[20-Jun-2015 02:51:13 UTC] PHP Stack trace:
+[20-Jun-2015 02:51:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:0
+[20-Jun-2015 02:51:13 UTC] PHP   2. changyan_sso::getuserinfo() /home/ubuntu/workspace/mw/extensions/ChangyanComment/interface/userinfo.php:16

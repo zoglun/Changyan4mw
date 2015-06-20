@@ -1,6 +1,6 @@
 <?php
 //接口公共部分
-
+error_reporting(E_ALL);
 
 
 
@@ -35,6 +35,7 @@ function getmwpath(){
     //注意：这里的反斜杠仅适用于linux，windows下尚未补全
     $path=explode('/',__DIR__);
     $workpath_array=array_splice($path,1,-3);
+    $workpath="";
     foreach($workpath_array as $i){
         
             $workpath.='/'.$i;
